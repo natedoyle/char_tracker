@@ -1,0 +1,23 @@
+<!-- extend from base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Sign In</h1>
+  <form action="" method="post" name="login">
+      {{ form.hidden_tag() }}
+      <p> Enter your character's Name so you can retrieve the record
+      {{ form.name }}
+      </p>
+      <p>Enter your characters stats</p>
+      <ul>
+      <li>{{ form.strength }}
+      <li>{{ form.dexterity }}
+      <li>{{ form.constitution }}
+      <li>{{ form.intelligence }}
+      <li>{{ form.wisdom }}
+      <li>{{ form.charisma }}
+      </ul>
+      
+      <p><input type="submit" value="Create Character"></p>
+  </form>
+{% endblock %}

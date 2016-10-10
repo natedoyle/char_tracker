@@ -1,0 +1,21 @@
+<!-- extend from base layout -->
+{% extends "base.html" %}
+
+<!-- Is there some way to insert a stat block to make this even more general? -->
+<!-- It would be nice to say form.stat_block instead of having to hard code each line -->
+
+{% block content %}
+  {% if h1 %}
+    <h1>Welcome - {{ name }}</h1>
+    {% else %}
+    <h1>Welcome to DnD 5e Character Tracker</h1>
+    {% endif %}
+  <form action="" method="post" name="login">
+      {{ form.hidden_tag() }}
+      <p>
+          {{ form.strength }}
+          {{ form.dexterity }}
+      </p>
+      <p><input type="submit" value="Sign In"></p>
+  </form>
+{% endblock %}

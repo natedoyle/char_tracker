@@ -1,4 +1,4 @@
-from flask.ext.wtf import Form
+from flask_wtf import Form
 from wtforms import StringField, BooleanField
 from wtforms.validators import DataRequired
 
@@ -16,5 +16,5 @@ class DND5e(Form):
     hps = StringField('HPs', validators=[DataRequired()])
     armor_class = StringField('AC', validators=[DataRequired()])
 
-class ThirteenthAge(DnD5e):
+class ThirteenthAge(DND5e):
     one_unique_thing = StringField('One Unique Thing', validators=[DataRequired()])

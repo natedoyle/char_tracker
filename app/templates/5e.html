@@ -12,10 +12,14 @@
     {% endif %}
   <form action="" method="post" name="login">
       {{ form.hidden_tag() }}
-      <p>
-          {{ form.strength }}
-          {{ form.dexterity }}
-      </p>
-      <p><input type="submit" value="Sign In"></p>
+      <div class=stat_block>
+          Strength: {{ form.strength }}<br/>
+          Dexterity: {{ form.dexterity }}<br/>
+          Constitution: {{ form.constitution }}<br/>
+          Intelligence: {{ form.intelligence }}<br/>
+          Wisdom: {{form.wisdom }}<br/>
+          Charisma: {{ form.charisma }}<br/>
+      </div>
+      <p><input type="submit" value="Submit Info"></p>
   </form>
 {% endblock %}
